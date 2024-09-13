@@ -3,7 +3,7 @@ import section_image2 from '../../../public/assets/hero_image.png';
 import section_image3 from '../../../public/assets/hero_image.png';
 import { FaBookSkull } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';  // تأكد من استيراد أنماط Swiper
+import 'swiper/css'; 
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
