@@ -8,6 +8,10 @@ import { FaDotCircle } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
 import { LuSettings } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase/firebase';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 
 
@@ -17,7 +21,18 @@ const SideBar = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  const navigate = useNavigate();
 
+
+  const handleLogout  = async ()=>{
+    try {
+      await signOut(auth);
+      Cookies.remove('user');
+      navigate('/')
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <div className="w-1/4 mx-8 my-8">
       <div className="flex justify-between items-center mb-6">
@@ -38,7 +53,7 @@ const SideBar = () => {
                 </div>
               </a>
               <a href="#logout" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-              <div className="flex items-center gap-3">
+              <div onClick={handleLogout} className="flex items-center gap-3">
                 <IoIosLogOut /> Logout
                 </div>
               </a>

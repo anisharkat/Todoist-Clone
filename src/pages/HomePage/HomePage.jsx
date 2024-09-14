@@ -5,7 +5,11 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { TaskManager } from "../../components/TaskManager/TaskManager";
 
 
+
+
 export const HomePage = () => {
+
+ 
   return (
     <>
     <Navbar />

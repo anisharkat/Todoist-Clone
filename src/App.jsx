@@ -4,11 +4,10 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { SignupPage } from "./pages/SignupPage/SignupPage";
 import TasksPage from "./pages/TasksPage/TasksPage";
 
-
-
 function App() {
   return (
     <>
+
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -17,6 +16,7 @@ function App() {
           <Route path="/tasks" element={<TasksPage/>} />
         </Routes>
       </Router>
+
     </>
   );
 }

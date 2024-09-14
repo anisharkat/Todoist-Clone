@@ -3,7 +3,12 @@ import { LoginForm } from '../../components/AuthForm/LoginForm';
 import { UsingGoogle } from '../../components/UsingGoogle/UsingGoogle';
 import login_image from '../../../public/assets/login_image.png';
 
+
+
 export const LoginPage = () => {
+
+
+ 
   return (
     <section className='overflow-hidden'>
       <Navbar />
