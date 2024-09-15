@@ -1,10 +1,8 @@
 import { signInWithPopup } from "firebase/auth";
 import { FaGoogle } from "react-icons/fa";
 import { auth, provider } from "../../firebase/firebase";
-import Cookies from 'js-cookie';  // استيراد مكتبة js-cookie
+import Cookies from 'js-cookie';
 import { useNavigate } from "react-router-dom";
-
-
 
 
 export const UsingGoogle = () => {
